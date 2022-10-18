@@ -2,11 +2,39 @@
 
 body{
     margin: 0;
-    font-family: 'Noto Sans', Consolas;
+    padding: 0;
+    font-family: 'Noto Sans', Consolas, Arial;
+    width: 100vw;
+    height: 100vh;
+    background: #d2cdba;
 }
 
 body * {
     box-sizing: border-box;
+}
+
+a {
+    color: #d2cdba;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: gold;
+}
+
+.logo{
+    font-size: 24px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #232946;
+    height: 6vh;
 }
 
 .main-login{
