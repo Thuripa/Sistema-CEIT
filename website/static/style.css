@@ -5,35 +5,39 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Noto Sans', Consolas, Arial;
+    font-family: Noto Sans, Consolas, Arial;
     width: 100vw;
     height: 100vh;
     background: #d2cdba;
+    overflow-x: hidden;
 }
 
-.div-homepage {
+.container {
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 body * {
     box-sizing: border-box;
 }
 
-h1 {
+.container h1 {
     color: #FF8811;
+    justify-content: center;
     align-content: center;
 }
 
-p {
+.container p {
     color: #221E22;
     align-content: center;
+    text-align: justify;
 }
 
 /* ----------------------------------------- ESTILO DO NAVBAR ----------------------------------------- */
 
 .nav-bar a {
-    color: #d2cdba;
+    color: #f5f5f5;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -52,7 +56,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: #221E22;
+    background: #1c375b;
     height: 6vh;
 }
 
@@ -103,7 +107,7 @@ nav {
 
 .left-login > h1 {
     font-size: 3vw;
-    color: #d2cdba;
+    color: #f5f5f5;
 }
 
 .left-login-image {
@@ -131,7 +135,7 @@ nav {
 }
 
 .card-login > h1 {
-    color: #d2cdba;
+    color: #f5f5f5;
     font-weight: 800;
     margin: 0;
 }
@@ -177,16 +181,34 @@ nav {
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 2px;
-    color: #d2cdba;
-    background: #078080;
+    color: #f5f5f5;
+    background: rgba(152, 206, 0, 0.92);
     cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #07808052;
 }
 
 a {
 
     color: floralwhite;
 
+}
+
+/*  ----------------------------------------- ESTILO HOMEPAGE ----------------------------------------- */
+
+.oficina-homepage > div {
+    background: #004AAD;
+    padding: 1em;
+    border-radius: 10px;
+    color: #f5f5f5;
+}
+
+.oficina-homepage {
+    margin: auto;
+    top: 20%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
 
 /*  ----------------------------------------- ESTILO RESPONSAVEL PELA RESPONSABILIDADE ----------------------------------------- */
@@ -228,7 +250,7 @@ a {
 /* NAVBAR */
 
 @media only screen and (max-width: 999px) {
-    body{
+    body {
         overflow-x: hidden;
     }
 
@@ -258,6 +280,7 @@ a {
     .nav-list.active {
         transform: translateX(0);
     }
+
     @keyframes navLinkFade {
         from {
             opacity: 0;
@@ -273,9 +296,11 @@ a {
     .mobile-menu.active .line1 {
         transform: rotate(-45deg) translate(-8px, 8px);
     }
+
     .mobile-menu.active .line2 {
         opacity: 0;
     }
+
     .mobile-menu.active .line3 {
         transform: rotate(45deg) translate(-5px, 7px);
     }
