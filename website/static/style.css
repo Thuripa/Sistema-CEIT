@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap'); /* IMPORTAÇÃO DE FONTE */
+
+/*  ----------------------------------------- ESTILO GERAL DA PÁGINA ----------------------------------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', Consolas, Arial;
+    width: 100vw;
+    height: 100vh;
+    background: #d2cdba;
+}
+
+.div-homepage {
+    justify-content: center;
+    align-items: center;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #FF8811;
+    align-content: center;
+}
+
+p {
+    color: #221E22;
+    align-content: center;
+}
+
+/* ----------------------------------------- ESTILO DO NAVBAR ----------------------------------------- */
+
+.nav-bar a {
+    color: #d2cdba;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-bar a:hover {
+    color: gold;
+}
+
+.logo {
+    font-size: 24px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #221E22;
+    height: 6vh;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+/* CRIAÇÃO E ESTILO DO MENU 'HAMBURGUER' PARA MOBILE */
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+/*  ----------------------------------------- ESTILO DA PÁGINA DE LOGIN ----------------------------------------- */
+
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background: #232946;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login > h1 {
+    font-size: 3vw;
+    color: #d2cdba;
+}
+
+.left-login-image {
+    width: 35vw;
+}
+
+.right-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #121629;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.card-login > h1 {
+    color: #d2cdba;
+    font-weight: 800;
+    margin: 0;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #b8c1ec;
+    color: #121629;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder {
+    color: #232946;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #d2cdba;
+    background: #078080;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #07808052;
+}
+
+a {
+
+    color: floralwhite;
+
+}
+
+/*  ----------------------------------------- ESTILO RESPONSAVEL PELA RESPONSABILIDADE ----------------------------------------- */
+/* TELA DE LOGIN */
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 85%
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-login {
+        flex-direction: column;
+    }
+
+    .left-login > h1 {
+        display: none;
+    }
+
+    .left-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login-image {
+        width: 75vw;
+    }
+
+    .card-login {
+        width: 90%;
+    }
+}
+
+/* NAVBAR */
+
+@media only screen and (max-width: 999px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 4vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #221E22;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+    }
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    /* TRANSFORMA O BOTÃO DE TOGGLE (ANIMAÇÃO) */
+    .mobile-menu.active .line1 {
+        transform: rotate(-45deg) translate(-8px, 8px);
+    }
+    .mobile-menu.active .line2 {
+        opacity: 0;
+    }
+    .mobile-menu.active .line3 {
+        transform: rotate(45deg) translate(-5px, 7px);
+    }
+
+}
