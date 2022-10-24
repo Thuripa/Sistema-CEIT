@@ -1,26 +1,29 @@
 {% extends "base.html" %}
 {% block title %}Login{% endblock %}
 {% block content %}
-<div class="main-login">
-    <div class="left-login">
-        <h1>Olá!<br>Efetue seu login</h1>
-        <img src="..\static\media\professora.svg" class="left-login-image" alt="Animação login"/>
-        <a style="font-size: 8px" target="_blank" href="https://storyset.com/people">People illustrations by Storyset</a>
-    </div>
-    <div class="right-login">
-        <div class="card-login">
-            <h1>LOGIN</h1>
-            <div class="textfield">
-                <label for="email">Email</label>
-                <input type="text" name="email" placeholder="Digite seu email">
+<form method="post">
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Olá!<br>Efetue seu login</h1>
+            <img src="..\static\media\professora.svg" class="left-login-image" alt="Animação login"/>
+            <a style="font-size: 8px" target="_blank" href="https://storyset.com/people">People illustrations by
+                Storyset</a>
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <div class="textfield">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" placeholder="Digite seu email">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" placeholder="Digite sua senha">
+                </div>
+                <button class="btn-login">Login</button>
+                <a href="/cadastro">Cadastrar novo usuário</a>
             </div>
-            <div class="textfield">
-                <label for="senha">Senha</label>
-                <input type="password" name="senha" placeholder="Digite sua senha">
-            </div>
-            <button class="btn-login">Login</button>
-            <a href="#">Cadastrar novo usuário</a>
         </div>
     </div>
-</div>
+</form>
 {% endblock %}

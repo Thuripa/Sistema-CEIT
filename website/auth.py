@@ -13,6 +13,6 @@ def logout():
     return '<p>Saindo...</p>'
 
 
-@auth.route('/sign-up')
+@auth.route('/cadastro')
 def sign_up():
-    return '<p>Registrando...</p>'
+    return render_template('cadastro.html')

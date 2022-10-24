@@ -16,6 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-top: 50px;
 }
 
 body * {
@@ -35,6 +36,17 @@ body * {
 }
 
 /* ----------------------------------------- ESTILO DO NAVBAR ----------------------------------------- */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.sticky + .container {
+    padding-top: 60px;
+}
 
 .nav-bar a {
     color: #f5f5f5;
@@ -219,8 +231,8 @@ a {
         width: 85%
     }
 
-    .oficina-homepage{
-        grid-template-columns: 25% 25% 25% 25%;
+    .oficina-homepage {
+        grid-template-columns: 33% 33% 33%;
     }
 }
 
@@ -229,7 +241,7 @@ a {
         flex-direction: column;
     }
 
-    .oficina-homepage{
+    .oficina-homepage {
         grid-template-columns: 50% 50%;
     }
 
@@ -258,18 +270,32 @@ a {
 
 /* NAVBAR */
 
-@media only screen and (max-width: 999px) {
+@media only screen and (max-width: 950px) {
     body {
         overflow-x: hidden;
     }
 
+    header {
+        z-index: 999;
+    }
+
     .nav-bar {
-        z-index: 99;
+        overflow: hidden;
+    }
+
+    .nav-bar {
+        height: 4vh;
+        top: 0;
+    }
+
+    .logo {
+        font-size: 20px;
+        letter-spacing: 3px;
     }
 
     .nav-list {
         position: absolute;
-        top: 4vh;
+        top: 2vh;
         right: 0;
         width: 50vw;
         height: 92vh;

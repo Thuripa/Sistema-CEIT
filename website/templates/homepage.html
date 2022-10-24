@@ -3,11 +3,14 @@
 {% block content %}
 <br/>
 <div class="oficina-homepage" >
-    <div>Oficina 1</div>
-    <div>Oficina 2</div>
-    <div>Oficina 3</div>
-    <div>Oficina 1</div>
-    <div>Oficina 2</div>
-    <div>Oficina 3</div>
+    {% for i in range(100) %}
+    <div>
+        Oficina {{ i+1 }}<br>
+        Professor: Teste {{ i+1 }}<br>
+        Dia: Teste {{ i+1 }}<br>
+        Turma: Teste {{ i+1 }}<br>
+        Vagas: Teste {{ i+1 }}<br>
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}
